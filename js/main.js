@@ -4,7 +4,9 @@
 
     const slider = document.querySelector('.card-container')
     // const randomCharacs = document.querySelector('.random')
-
+     
+        prevBtn.style.display='none'
+        nextBtn.style.display='none'
     
 
     document.querySelector('.choice').addEventListener('click', showCharacter)
@@ -102,63 +104,66 @@
 
 
 
-    document.querySelector('.randomCharacBtn').addEventListener('click', function(){
+    // document.querySelector('.randomCharacBtn').addEventListener('click', function(){
 
        
-        // randomCharacs.classList.remove('hidden')
-        slider.textContent = ''
+    //     // randomCharacs.classList.remove('hidden')
+    //     slider.innerHTML = ''
+
+    //     // document.querySelector('random').classList.remove('hidden')
        
-        prevBtn.style.display='none'
-        nextBtn.style.display='none'
-
-
-        const random = Math.floor(Math.random() * (20 -1)+1)
-        const proxy = 'https://cors-anywhere.herokuapp.com/';
-        const api =`${proxy}https://rickandmortyapi.com/api/character/${random}`;
+    //     prevBtn.style.display='none'
+    //     nextBtn.style.display='none'
 
 
 
-        fetch(api) 
-        .then(res => res.json()) // parse response as JSON
-        .then(data => {
-            console.log(data)    
+    //     const random = Math.floor(Math.random() * (20 -1)+1)
+    //     const proxy = 'https://cors-anywhere.herokuapp.com/';
+    //     const api =`${proxy}https://rickandmortyapi.com/api/character/${random}`;
+
+
+
+    //     fetch(api) 
+    //     .then(res => res.json()) // parse response as JSON
+    //     .then(data => {
+    //         console.log(data)    
         
               
-                let section = document.createElement('section')
-                let subSection = document.createElement('section')
-                let img  = document.createElement('img');
-                let h2 =document.createElement('h2')
-                let origin = document.createElement('h3')
+    //             let section = document.createElement('section')
+    //             let subSection = document.createElement('section')
+    //             let img  = document.createElement('img');
+    //             let h2 =document.createElement('h2')
+    //             let origin = document.createElement('h3')
     
-                let species = document.createElement('h3')
-                let location = document.createElement('h3')
+    //             let species = document.createElement('h3')
+    //             let location = document.createElement('h3')
                 
     
-                    h2.innerText = data.name
-                    species.innerText = `Species: ${data.species}`
-                    origin.innerText = `Origin: ${data.origin.name}`
-                    location.innerText = `Location: ${data.location.name}`
-                    img.src = data.image
+    //                 h2.innerText = data.name
+    //                 species.innerText = `Species: ${data.species}`
+    //                 origin.innerText = `Origin: ${data.origin.name}`
+    //                 location.innerText = `Location: ${data.location.name}`
+    //                 img.src = data.image
     
     
-                    slider.appendChild(section);
-                    section.appendChild(h2)
-                    section.appendChild(img)
-                    section.appendChild(subSection)
-                    subSection.appendChild(species)
-                    subSection.appendChild(origin)
-                    subSection.appendChild(location)
+    //                 slider.appendChild(section);
+    //                 section.appendChild(h2)
+    //                 section.appendChild(img)
+    //                 section.appendChild(subSection)
+    //                 subSection.appendChild(species)
+    //                 subSection.appendChild(origin)
+    //                 subSection.appendChild(location)
 
-                    subSection.className = 'subSection'
+    //                 subSection.className = 'subSection'
             
             
 
 
 
-        })
-        .catch(err => {
-            console.log(`error ${err}`)
-        });
+    //     })
+    //     .catch(err => {
+    //         console.log(`error ${err}`)
+    //     });
 
         
-    })
+    // })

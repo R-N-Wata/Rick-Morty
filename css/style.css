@@ -73,12 +73,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position:relative;
 
 }
 
 .prev, .next{
   position:absolute;
-  top:65.5%;
+  top:50%;
   border:none;
   background:none;
   width:2rem;
@@ -99,12 +100,12 @@ body {
 }
 
 .prev{
-  left:25%;
+  left:10%;
 }
 
 
 .next{
-  right:26%;
+  right:11%;
 }
 
 .randomCharacBtn, .choice{
@@ -244,15 +245,28 @@ h2{
     font-size:1.5rem;
     /* color:black; */
     /* z-index:-10; */
+    top:60%;
   }
-/* .prev{
-  left:46%;
+  .info-wrapper{
+    position:static;
+  }
+.prev{
+  left:30%;
 }
 .next{
-  right:47%;
-} */
+  right:30%;
+}
   h3{
     margin-top:-.7rem;
+  }
+}
+
+@media (min-width:1000px){
+  .prev{
+    left:34%;
+  }
+  .next{
+    right:34%;
   }
 }
 @media (min-width:1250px){
@@ -260,32 +274,50 @@ h2{
     margin:.3rem 0 1rem 0;
   }
 
-  .next, .prev{
+  /* .next, .prev{
     font-size:1-3rem;
+    top:55%;
   }
   .prev{
     left:36%;
+    
   }
   .next{
     right:37%;
-  }
+  } */
 }
 
 @media (min-width: 1300px){
-  .next, .prev{
+  /* .next, .prev{
     font-size:1-3rem;
-  }
+  } */
   .card-container{
     margin:-1rem 0 1rem 0;
+  }
+  .prev{
+    left:39%;
+  }
+  .next{
+    right:39%;
+  }
+  .next, .prev{
+    top:59%;
   }
 }
 
 
 @media (max-width: 540px){
 
-  .prev, .next{
+  /* .prev, .next{
     top:84.5%
 
+  } */
+  .prev{
+    left:-15%;
+  }
+
+  .next{
+    right:-15%;
   }
   img{
     width:10rem;
@@ -313,9 +345,9 @@ h2{
 
 
 @media (max-width:414px){
-  .next, .prev{
+  /* .next, .prev{
     top:67.8%;
-  }
+  } */
 
   img{
     width:35vw;
@@ -331,17 +363,17 @@ h2{
   .card-container > section > section {
     width:34.5vw;
   }
-  .prev{
+  /* .prev{
     left:20%
     
-  }
-  .next{
+  } */
+  /* .next{
     right:21%
   }
 
   .next, .prev{
     top:50%
-  }
+  } */
 
 
 }
@@ -367,11 +399,12 @@ h2{
   .carousel{
     width:8.602rem;
   }
-
+/* 
   .next, .prev{
     top:52%;
     
   }
+} */
 }
 
 
@@ -390,9 +423,9 @@ h2{
     width:8.41rem;
   }
 
-  .next, .prev{
+  /* .next, .prev{
     top:60%
-  }
+  } */
 }
 @media (max-width:375px){
   
