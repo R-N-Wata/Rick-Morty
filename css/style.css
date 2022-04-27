@@ -1,0 +1,174 @@
+Box Model Hack
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background:url('/img/back5.jfif');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  overflow-x: hidden;
+  background-color: black;
+  
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+ .main{
+
+  border:20px solid rgba(3, 53, 132, 0.9);
+  background: rgba(2, 54, 1, 0.95);
+  padding:2rem 1rem;
+  border-radius: 3%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  color:white;
+  width:60vw;
+  box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
+}
+
+
+.info-wrapper{
+
+  width:80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.prev, .next{
+  position:absolute;
+  top:59%;
+  border:none;
+  background:none;
+  width:2rem;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.5rem;;
+  display:none;
+  
+  
+}
+
+.hidden{
+  display:none;
+}
+
+.prev{
+  left:14%;
+}
+
+
+.next{
+  right:15%;
+}
+
+.randomCharacBtn, .choice{
+  padding:.8rem 1.4rem;
+  border-radius: 2%;
+  background-color: rgba(3, 53, 132, 0.9);
+}
+
+input{
+  padding:.8rem .5rem;
+  width:30vw;
+  font-size:1rem;
+}
+
+.next:hover, .prev:hover{
+  color:rgb(148, 147, 147)
+}
+
+.carousel{
+  width:40vw;
+ overflow-x: hidden;
+ 
+}
+.card-container{
+  display: flex;
+  transition:all .3s;
+  width:900%;
+  
+
+  
+}
+
+.card-container section{
+  /* flex-basis: 100%; */
+  justify-content: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:40vw;
+  text-align:center;
+  transition:all .3s;
+ 
+}
+
+
+
+button {
+  background:none;
+  color:white
+}
+
+img{
+  width:40vw;
+  height:9.5rem;
+}
+header {
+
+}
+
+.random{
+  z-index:4;
+  flex-direction: column;
+}
+
+footer {
+
+} 
+
+h3{
+  font-size:.8rem;
+  
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
