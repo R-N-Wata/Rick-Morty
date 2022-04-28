@@ -77,7 +77,7 @@
 
         let counter = 0
 
-        let changes = 0;
+       
 
 
         nextBtn.addEventListener('click', function(){
