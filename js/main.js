@@ -3,23 +3,22 @@
     const nextBtn = document.querySelector('.next')
 
     const slider = document.querySelector('.card-container')
-    const randomCharacs = document.querySelector('.random')
+    // const randomCharacs = document.querySelector('.random')
 
-
+    
 
     document.querySelector('.choice').addEventListener('click', showCharacter)
 
 
     
     function showCharacter(){
-
-
+        slider.textContent = ''
 
         prevBtn.style.display='block'
 
         nextBtn.style.display='block'
 
-        randomCharacs.classList.add('hidden')
+        // randomCharacs.classList.add('hidden')
         
         let input = document.querySelector('input').value
         const proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -32,17 +31,18 @@
         .then(data => {
             console.log(data)
             let characters = data.results;
-        
+          
 
             characters.forEach((el,i) =>{
                 
             let section = document.createElement('section')
-            let img  = document.createElement('img');
-            let h2 =document.createElement('h2')
-            let origin = document.createElement('h3')
+            let subSection = document.createElement('section')
+                let img  = document.createElement('img');
+                let h2 =document.createElement('h2')
+                let origin = document.createElement('h3')
 
-            let species = document.createElement('h3')
-            let location = document.createElement('h3')
+                let species = document.createElement('h3')
+                let location = document.createElement('h3')
             
 
                 h2.innerText = el.name
@@ -55,11 +55,12 @@
                 slider.appendChild(section);
                 section.appendChild(h2)
                 section.appendChild(img)
-                section.appendChild(species)
-                section.appendChild(origin)
-                section.appendChild(location)
+                section.appendChild(subSection)
+                subSection.appendChild(species)
+                subSection.appendChild(origin)
+                subSection.appendChild(location)
             
-                
+                subSection.className = 'subSection'
             })
             console.log(characters)
 
@@ -104,8 +105,8 @@
     document.querySelector('.randomCharacBtn').addEventListener('click', function(){
 
        
-            //  randomCharacs.classList.remove('hidden')
-        
+        // randomCharacs.classList.remove('hidden')
+        slider.textContent = ''
        
         prevBtn.style.display='none'
         nextBtn.style.display='none'
@@ -124,6 +125,7 @@
         
               
                 let section = document.createElement('section')
+                let subSection = document.createElement('section')
                 let img  = document.createElement('img');
                 let h2 =document.createElement('h2')
                 let origin = document.createElement('h3')
@@ -142,9 +144,12 @@
                     slider.appendChild(section);
                     section.appendChild(h2)
                     section.appendChild(img)
-                    section.appendChild(species)
-                    section.appendChild(origin)
-                    section.appendChild(location)
+                    section.appendChild(subSection)
+                    subSection.appendChild(species)
+                    subSection.appendChild(origin)
+                    subSection.appendChild(location)
+
+                    subSection.className = 'subSection'
             
             
 
@@ -154,4 +159,6 @@
         .catch(err => {
             console.log(`error ${err}`)
         });
+
+        
     })

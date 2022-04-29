@@ -22,9 +22,9 @@ Box Model Hack
 /*******************************************/
 
 body {
-  background:url('/img/back5.jfif');
+  background:url('/img/back11.webp');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +51,7 @@ body {
   align-items: center;
   gap:2rem;
   color:white;
+  margin-bottom:10rem;
   width:60vw;
   box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
@@ -69,7 +70,7 @@ body {
 
 .prev, .next{
   position:absolute;
-  top:59%;
+  top:71%;
   border:none;
   background:none;
   width:2rem;
@@ -90,12 +91,12 @@ body {
 }
 
 .prev{
-  left:14%;
+  left:40%;
 }
 
 
 .next{
-  right:15%;
+  right:40%;
 }
 
 .randomCharacBtn, .choice{
@@ -150,6 +151,7 @@ button {
 img{
   width:40vw;
   height:9.5rem;
+  border-radius: 50%;
 }
 header {
 
@@ -159,6 +161,14 @@ header {
   z-index:4;
   flex-direction: column;
 }
+.subSection{
+  background:white;
+  color:black;
+  border-radius:10%;
+  /* margin-top:-1rem;
+  z-index:-1; */
+  padding-top:1rem;
+}
 
 footer {
 
@@ -166,9 +176,48 @@ footer {
 
 h3{
   font-size:.8rem;
+  margin-top:0rem;
+  
   
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+@media (min-width:1000px){
+  body{
+    background:url('/img/back8.jpg');
+    background-position:center;
+  }
+  .main{
+    width:30rem;
+    margin:0rem;
+  }
+
+  .carousel{
+    width:20rem;
+    border:1px solid red;
+  }
+
+  .card-container{
+    width:20rem;
+    border:2px solid blue;
+    transform:translate(-400%)
+  }
+
+  .card-container section{
+    width:20rem;
+    
+
+  }
+  img{
+    width:20rem;
+    height:15rem;
+  }
+
+  .prev, .next{
+    color:yellow;
+    font-size:10rem;
+  }
+}
