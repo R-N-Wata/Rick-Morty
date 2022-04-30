@@ -355,7 +355,7 @@ h2{
   
 }
 
-@media (max-width:410px) {
+@media (max-width:405px) {
   .carousel{
     width:8.8rem;
   }
