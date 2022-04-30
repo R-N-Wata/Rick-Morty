@@ -355,6 +355,12 @@ h2{
   
 }
 
+@media (max-width:410px) {
+  .carousel{
+    width:8.9rem;
+  }
+}
+
 
 @media (max-width:400px){
 
