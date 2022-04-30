@@ -355,7 +355,11 @@ h2{
   
 }
 
-
+@media (max-width:405px) {
+  .carousel{
+    width:8.8rem;
+  }
+}
 
 
 @media (max-width:400px){
@@ -375,15 +379,19 @@ h2{
 @media (max-width:390px){
  
   .carousel{
-    width:8.59rem;
+    width:8.54rem;
   }
 
 
 }
 
-@media (max-width:405px) {
+@media (max-width:385px) {
   .carousel{
-    width:8.3rem;
+    width:8.43rem;
+  }
+
+  .next, .prev{
+    top:60%
   }
 }
 @media (max-width:375px){
