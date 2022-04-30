@@ -26,8 +26,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  /* gap:2rem */
   height:100vh;
   overflow-x: hidden;
   background-color: black;
@@ -52,10 +54,16 @@ body {
   gap:2rem;
   color:white;
   margin-bottom:10rem;
-  width:60vw;
+  /* width:60vw; */
   box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.75);
+}
+.logo{
+  width:70vw;
+  height:10vh;
+  margin-top:1rem;
+  border-radius:0;
 }
 
 
@@ -70,7 +78,7 @@ body {
 
 .prev, .next{
   position:absolute;
-  top:71%;
+  top:65.5%;
   border:none;
   background:none;
   width:2rem;
@@ -91,12 +99,12 @@ body {
 }
 
 .prev{
-  left:40%;
+  left:25%;
 }
 
 
 .next{
-  right:40%;
+  right:26%;
 }
 
 .randomCharacBtn, .choice{
@@ -104,6 +112,7 @@ body {
   border-radius: 2%;
   background-color: rgba(3, 53, 132, 0.9);
 }
+
 
 input{
   padding:.8rem .5rem;
@@ -124,6 +133,7 @@ input{
   display: flex;
   transition:all .3s;
   width:900%;
+  margin-top:-1.5rem;
   
 
   
@@ -180,44 +190,242 @@ h3{
   
   
 }
+h2{
+  font-size:1.2rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media (min-width:1000px){
+@media (min-width:750px){
   body{
-    background:url('/img/back8.jpg');
-    background-position:center;
+    background-position:100% 80%;
+    justify-content: flex-start;
+    background-attachment: fixed;
+
   }
   .main{
-    width:30rem;
+   max-width:55rem;
     margin:0rem;
+    padding:0;
+    padding:0rem 0rem;
+  }
+  form{
+    margin:1rem 1rem 0 1rem;
   }
 
+  .randomCharacBtn{
+    margin-bottom: -1rem;;
+  }
   .carousel{
-    width:20rem;
-    border:1px solid red;
-  }
-
-  .card-container{
-    width:20rem;
-    border:2px solid blue;
-    transform:translate(-400%)
+    width:10.01rem;
+  margin-bottom:.6rem;
   }
 
   .card-container section{
-    width:20rem;
+    width:10rem;
     
 
   }
+  .logo{
+    width:30rem;
+    height:10rem;
+    margin:0rem;
+
+  }
   img{
-    width:20rem;
-    height:15rem;
+    width:7rem;
+    height:7rem;
   }
 
   .prev, .next{
-    color:yellow;
-    font-size:10rem;
+    /* color:yellow; */
+    font-size:1.5rem;
+    /* color:black; */
+    /* z-index:-10; */
+  }
+/* .prev{
+  left:46%;
+}
+.next{
+  right:47%;
+} */
+  h3{
+    margin-top:-.7rem;
   }
 }
+@media (min-width:1250px){
+  .card-container{
+    margin:.3rem 0 1rem 0;
+  }
+
+  .next, .prev{
+    font-size:1-3rem;
+  }
+  .prev{
+    left:36%;
+  }
+  .next{
+    right:37%;
+  }
+}
+
+@media (min-width: 1300px){
+  .next, .prev{
+    font-size:1-3rem;
+  }
+  .card-container{
+    margin:-1rem 0 1rem 0;
+  }
+}
+
+
+@media (max-width: 540px){
+
+  .prev, .next{
+    top:84.5%
+
+  }
+  img{
+    width:10rem;
+  }
+
+  .carousel{
+    width:10rem;
+  }
+  .randomCharacBtn{
+    margin-bottom:-1rem;
+  }
+
+  .card-container{
+    margin-top:-1.1rem;
+  }
+  .card-container  section{
+    /* width:10rem; */
+  }
+
+  .card-container > section > section {
+    width:10rem;
+  }
+}
+
+
+
+@media (max-width:414px){
+  .next, .prev{
+    top:67.8%;
+  }
+
+  img{
+    width:35vw;
+    height:8.5rem;
+    border-radius: 50%;
+  }
+
+  .carousel{
+    width:9.0599rem;
+  }
+
+
+  .card-container > section > section {
+    width:34.5vw;
+  }
+  .prev{
+    left:20%
+    
+  }
+  .next{
+    right:21%
+  }
+
+  .next, .prev{
+    top:50%
+  }
+
+
+}
+
+@media (max-width:412px){
+
+  .carousel{
+    width:9.02rem;
+  }
+
+  
+}
+
+
+@media (max-width:400px){
+
+  .carousel{
+    width:8.602rem;
+  }
+
+  .next, .prev{
+    top:52%;
+    
+  }
+}
+
+
+/* iphone 12 pro */
+@media (max-width:390px){
+ 
+  .carousel{
+    width:8.54rem;
+  }
+
+
+}
+
+
+@media (max-width:375px){
+  
+  .next, .prev{
+    top:60%
+  }
+
+  input{
+    height:.3rem;
+  }
+  .choice, .randomCharacBtn{
+    padding:.35rem 1rem;
+  }
+  .randomCharacBtn{
+    margin-bottom:-1rem;
+  }
+
+  .card-container{
+    margin-top:-1.2rem;
+  }
+  img{
+    width:35vw;
+    height:8.5rem;
+    border-radius: 50%;
+  }
+
+  .carousel{
+    width:8.21rem;
+  }
+
+  .card-container > section > section {
+    width:34.5vw;
+  }
+
+
+}
+
+
+@media (max-width:360px){
+  
+
+  .carousel{
+    width:7.884rem;
+  }
+}
+
+
+
+
+
